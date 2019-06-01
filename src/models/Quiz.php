@@ -5,8 +5,8 @@ use \Illuminate\Database\Eloquent\Model;
 
 class Quiz extends Model
 {
+  public $timestamps = false;
   protected $table = 'quizes';
-  protected $hidden = ['created_at', 'updated_at'];
 
   public function setTitleAttribute($title)
   {
