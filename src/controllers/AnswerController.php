@@ -11,11 +11,9 @@ use \Illuminate\Database\Eloquent\ModelNotFoundException;
 class AnswerController extends BaseController
 {
 
-  protected $answerService;
-
   public function __construct(AnswerContract $answerService)
   {
-    $this->answerService = $answerService;
+    parent::__construct($answerService);
   }
 
   public function read(Request $request, Response $response): Response
